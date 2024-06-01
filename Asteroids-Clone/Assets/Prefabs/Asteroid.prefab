@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6234787350057722679}
   - component: {fileID: 5555768225426294052}
-  - component: {fileID: 383278735449834692}
+  - component: {fileID: 5493765234480424863}
   - component: {fileID: 6802573862110319210}
   - component: {fileID: 5843649280511322219}
   - component: {fileID: 2379697603281720038}
@@ -30,11 +30,11 @@ Transform:
   m_GameObject: {fileID: 7259927530960476127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.87, y: -0.42, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.029999997, y: 0.029999997, z: 0.029999997}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5555768225426294052
 SpriteRenderer:
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 46973c5949e3550419513ab851d37867, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &383278735449834692
+--- !u!60 &5493765234480424863
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,7 +124,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.8828125}
+    oldSize: {x: 2, y: 2.15}
     newSize: {x: 1, y: 0.8828125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -132,12 +132,20 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.25, y: 0.43359375}
-      - {x: -0.5, y: 0}
-      - {x: -0.25, y: -0.43359375}
-      - {x: 0.25, y: -0.43359375}
-      - {x: 0.5, y: 0}
-      - {x: 0.25, y: 0.43359375}
+    - - {x: -0.5687464, y: -0.8003528}
+      - {x: -0.68297577, y: -0.4892218}
+      - {x: -0.8853104, y: -0.32355762}
+      - {x: -0.8156357, y: 0.31484604}
+      - {x: -0.31652313, y: 0.83244014}
+      - {x: 0.061568793, y: 0.88273615}
+      - {x: 0.35078645, y: 0.78417796}
+      - {x: 0.69343233, y: 1.0173309}
+      - {x: 0.9031705, y: 0.858491}
+      - {x: 0.7508278, y: 0.42153883}
+      - {x: 0.93359905, y: 0.23619568}
+      - {x: 0.6330744, y: -0.1431213}
+      - {x: 0.5556567, y: -0.4803063}
+      - {x: -0.27598405, y: -0.9903786}
   m_UseDelaunayMesh: 0
 --- !u!50 &6802573862110319210
 Rigidbody2D:
@@ -191,5 +199,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedParticles: {fileID: 5654864624902309432, guid: 681a6f5e111a9e34b959405556812678, type: 3}
+  rotationSpeedRange: {x: -200, y: 200}
   size: 3
   gameManager: {fileID: 0}

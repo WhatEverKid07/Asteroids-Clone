@@ -5,7 +5,8 @@ using UnityEngine;
 public class Asteroid : MonoBehaviour
 {
     [SerializeField] private ParticleSystem destroyedParticles;
-    public int size = 3;
+    [SerializeField] private Vector2 rotationSpeedRange = new Vector2(-200f, 200f);
+    public float size = 3;
     public GameManager gameManager;
 
     private void Start()
@@ -16,6 +17,8 @@ public class Asteroid : MonoBehaviour
         Vector2 direction = new Vector2(Random.value, Random.value).normalized;
         float spawnSpeed = Random.Range(4f - size, 5f - size);
         rb.AddForce(direction * spawnSpeed, ForceMode2D.Impulse);
+        float rotationSpeed = Random.Range(rotationSpeedRange.x, rotationSpeedRange.y);
+        rb.angularVelocity = rotationSpeed;
         gameManager.asteroidCount++;
     }
 

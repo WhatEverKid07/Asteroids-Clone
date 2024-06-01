@@ -10,14 +10,15 @@ public class GameManager : MonoBehaviour
     public int asteroidCount = 0;
     
     private int level = 0;
+    public int playersLeft = 0;
 
     private void Update()
     {
         if (asteroidCount == 0)
         {
             level++;
-            int numAdteroids = 2 + (2 * level);
-            for (int i = 0; i < numAdteroids; i++)
+            int numAsteroids = 2 + (2 * level);
+            for (int i = 0; i < numAsteroids; i++)
             {
                 SpawnAsteroids();
             }
