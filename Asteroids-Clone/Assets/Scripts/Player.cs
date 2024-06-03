@@ -14,6 +14,11 @@ public class Player : MonoBehaviour
     [SerializeField] private float bulletSpeed = 8f;
     [SerializeField] private ParticleSystem exhaustParticles;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource exhaustSFX;
+    [SerializeField] private AudioSource shootingSFX;
+    [SerializeField] private AudioSource explosionSFX;
+
     [Header("Object Referance")]
     [SerializeField] private Transform bulletSpawn;
     [SerializeField] private Rigidbody2D bulletPrefab;
@@ -59,11 +64,13 @@ public class Player : MonoBehaviour
         if (isAccelerating && !exhaustParticles.isPlaying)
         {
             exhaustParticles.Play();
+            exhaustSFX.Play();
             Debug.Log("P1 accelerating");
         }
         else if (!isAccelerating && exhaustParticles.isPlaying)
         {
             exhaustParticles.Stop();
+            exhaustSFX.Stop();
         }
     }
     private void Player2HandleSipAcceleration()
@@ -72,11 +79,13 @@ public class Player : MonoBehaviour
         if (isAccelerating && !exhaustParticles.isPlaying)
         {
             exhaustParticles.Play();
+            exhaustSFX.Play();
             Debug.Log("P2 accelerating");
         }
         else if (!isAccelerating && exhaustParticles.isPlaying)
         {
             exhaustParticles.Stop();
+            exhaustSFX.Stop();
         }
     }
     private void HandleShipRotation()
@@ -105,6 +114,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            shootingSFX.Play();
             Rigidbody2D bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
 
             Vector2 shipVelocity = shipRigibody.velocity;
@@ -124,6 +134,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.RightControl))
         {
+            shootingSFX.Play();
             Rigidbody2D bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
 
             Vector2 shipVelocity = shipRigibody.velocity;
@@ -143,6 +154,7 @@ public class Player : MonoBehaviour
     {
         if (collision.CompareTag("Asteroids"))
         {
+            explosionSFX.Play();
             isAlive = false;
             //GameManager gameManager = FindAnyObjectByType<GameManager>();
             gameManager.playersLeft-= 1;

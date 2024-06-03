@@ -45,6 +45,12 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.None;
         gameIsPaused = false;
+        StartCoroutine(BackToMenuPause());
+    }
+
+    IEnumerator BackToMenuPause()
+    {
+        yield return new WaitForSeconds(0.3f);
         SceneManager.LoadScene(mainMenu);
     }
 }

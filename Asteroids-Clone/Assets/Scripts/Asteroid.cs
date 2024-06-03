@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
+    [SerializeField] private AudioSource explosionSFX;
     [SerializeField] private ParticleSystem destroyedParticles;
     [SerializeField] private Vector2 rotationSpeedRange = new Vector2(-200f, 200f);
     public float size = 3;
@@ -11,6 +12,8 @@ public class Asteroid : MonoBehaviour
 
     private void Start()
     {
+        explosionSFX = GetComponent<AudioSource>();
+
         transform.localScale = 0.5f * size * Vector3.one;
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
@@ -26,10 +29,12 @@ public class Asteroid : MonoBehaviour
     {
         if (collision.CompareTag("Bullet"))
         {
+            explosionSFX.Play();
+
             gameManager.asteroidCount--;
             Destroy(collision.gameObject);
 
-            if(size > 1)
+            if (size > 1)
             {
                 for (int i = 0; i < 2; i++)
                 {
