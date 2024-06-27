@@ -193,7 +193,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: fa48ee51f9154ac40995e1dec3ab1ae3, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: fa48ee51f9154ac40995e1dec3ab1ae3, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: fa48ee51f9154ac40995e1dec3ab1ae3, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -816,6 +816,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1823733217}
   mainMenu: Start Menu
+  eventSystem: {fileID: 418870132}
+  selectedButtonInPauseMenu: {fileID: 2007584797}
 --- !u!1 &561492068
 GameObject:
   m_ObjectHideFlags: 0
@@ -11356,7 +11358,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 5c2f942ea339ef549a996c42369174fb, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 5c2f942ea339ef549a996c42369174fb, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 5c2f942ea339ef549a996c42369174fb, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
