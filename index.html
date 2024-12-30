@@ -6,30 +6,32 @@
     <title>A-steroids</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
     <style>
+        /* General Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        /* Global Styles */
         body {
-            font-family: "Silkscreen", serif;
+            font-family: "Merriweather", serif;
+            font-weight: 700;
             line-height: 1.6;
             background-color: #f9f9f9;
             color: #333;
             padding: 20px;
         }
 
+        /* Header Styles */
         header {
             text-align: center;
             margin-bottom: 40px;
         }
 
             header h1 {
-                font-family: "Silkscreen", serif;
                 font-size: 2.5rem;
                 margin-bottom: 10px;
             }
@@ -39,6 +41,7 @@
                 color: #555;
             }
 
+        /* Main Content */
         main {
             max-width: 800px;
             margin: 0 auto;
@@ -49,7 +52,6 @@
         }
 
             section h2 {
-                font-family: "Silkscreen", serif;
                 font-size: 2rem;
                 margin-bottom: 10px;
                 color: #444;
@@ -59,42 +61,61 @@
                 margin-bottom: 20px;
             }
 
+        /* Footer Styles */
         footer {
             text-align: center;
             margin-top: 40px;
             font-size: 0.9rem;
             color: #777;
         }
-    </style>
 
+        /* Links */
+        a {
+            color: lightblue;
+            text-decoration: none;
+        }
+
+            a:hover {
+                color: red;
+            }
+
+        /* Custom Classes */
+        .thick-underline {
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>A-steroids</h1>
-        <p>A simple customizable website powered by GitHub Pages</p>
+        <p>A small solo project by me, inspired by the classic Asteroids game.</p>
     </header>
 
     <main>
         <section>
             <h2>About</h2>
-            <p>This is a basic template to help you get started with your website. You can edit the content, styles, and layout to suit your needs.</p>
+            <p>A simple clone of Asteroids with an added local 2-player mode. This was a fully solo project, where I created all the art, sound, and programming.</p>
         </section>
 
         <section>
-            <h2>Features</h2>
-            <p>- Fully customizable</p>
-            <p>- Powered by GitHub Pages</p>
-            <p>- Uses modern web technologies</p>
+            <h2>Process</h2>
+            <p>
+                <span class="thick-underline">Art/Visuals:</span> I created all the art assets in Procreate on an iPad. While I don’t consider myself an artist, I’m proud of the results I achieved with this project.
+            </p>
+            <p>
+                <span class="thick-underline">Sound/Music:</span> For this game, I sourced all the sound assets online and used Audacity to edit and customize them to fit my needs.
+            </p>
+            <p>
+                <span class="thick-underline">Code:</span> I initially followed a tutorial to recreate the basic mechanics of the original Asteroids game. From there, I replaced all the assets and added a local 2-player mode
+                allowing players to share the same keyboard.
+            </p>
         </section>
 
         <section>
             <h2>Contact</h2>
-            <p>Feel free to reach out with questions or feedback!</p>
+            <p>Feel free to check out my <a href="https://eugeniocl.wixsite.com/eclgamesdesign" target="_blank">portfolio</a> for links to get in touch!</p>
         </section>
     </main>
-
-    <footer>
-        <p>© 2024 My Custom Website. All rights reserved.</p>
-    </footer>
 </body>
 </html>
